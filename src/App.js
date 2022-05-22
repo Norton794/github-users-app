@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Attribuition from "./components/Attribuition";
+import Card from "./components/Card";
+import SearchBar from "./components/SearchBar";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="theme-light">
+      <div className="app">
+        <div className="app__header">
+          <h1>devfinder</h1>
+          <ThemeSwitcher theme={`DARK`}/>
+        </div>
+        <SearchBar/>
+        <Card/>
+        <Attribuition/>
+      </div>
     </div>
   );
 }
