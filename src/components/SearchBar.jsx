@@ -8,7 +8,7 @@ export default function SearchBar(props) {
       <div className="search__wrapper">
         <div className="search__icon">{SearchIcon}</div> 
         <div>
-        <input className="search__input" type="text" placeholder="Search Github Username" />
+        <input className="search__input" type="text" placeholder="Search Github Username" value={props.username} onChange={(e)=> {props.setUsername(e.target.value) }}/>
         <button className="search__button" type="button">Search</button>
         </div>
         
