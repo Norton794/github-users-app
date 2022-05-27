@@ -7,17 +7,19 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 
 
 
+
 function App() {
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("norton794");
+  const [key, setKey] = useState("");
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${username}`)
+    fetch(`https://api.github.com/users/${key}`)
       .then((response) => response.json())
       .then((json) => setUser(json))
       .catch((err) => setError(err));
-  }, [username]);
+  }, [key]);
 
   return (
     <div className="theme-light">
@@ -26,7 +28,7 @@ function App() {
           <h1>devfinder</h1>
           <ThemeSwitcher theme={`DARK`} />
         </div>
-        <SearchBar username={username} setUsername={setUsername} />
+        <SearchBar username={username} setUsername={setUsername} setKey={setKey} />
         {!error ? <Card user={user} /> : <h3>No Results</h3>}
         <Attribuition />
       </div>

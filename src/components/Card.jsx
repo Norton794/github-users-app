@@ -1,14 +1,11 @@
 import React from "react";
 import "../Card.css";
 import { BuildingIcon, LocIcon, SocialIcon, ChainIcon } from "./Icons";
-function Card({user}) {
+function Card({ user }) {
   return (
     <div className="card__wrapper">
       <div className="card__img">
-        <img
-          src={user?.avatar_url}
-          alt="User Pic"
-        />
+        <img src={user?.avatar_url} alt="User Pic" />
       </div>
       <div className="card__info">
         <div className="card__info--top">
@@ -17,7 +14,9 @@ function Card({user}) {
               <h2>{user?.name}</h2>
               <a href={user?.html_url}>{`@${user?.login}`}</a>
             </div>
-            <span className="joined-at">{new Date(user?.created_at).toLocaleDateString()}</span>
+            <span className="joined-at">
+              {new Date(user?.created_at).toLocaleDateString()}
+            </span>
           </div>
         </div>
 
@@ -44,7 +43,11 @@ function Card({user}) {
             </div>
             <div>
               {SocialIcon}
-              <span className="not-available">{user?.twitter_username ? user?.twitter_username : "Not available"}</span>
+              <span className="not-available">
+                {user?.twitter_username
+                  ? user?.twitter_username
+                  : "Not available"}
+              </span>
             </div>
           </div>
 
@@ -52,7 +55,7 @@ function Card({user}) {
             <div>
               {ChainIcon}
               <a
-                href="https://github.blog"
+                href={user?.blog ? user?.blog : "https://github.blog"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
