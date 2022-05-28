@@ -15,3 +15,11 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+.no-results{
+  color: #ff0000cc;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 15rem;
+}

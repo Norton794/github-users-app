@@ -29,7 +29,7 @@ function App() {
           <ThemeSwitcher theme={`DARK`} />
         </div>
         <SearchBar username={username} setUsername={setUsername} setKey={setKey} />
-        {!error ? <Card user={user} /> : <h3>No Results</h3>}
+        {error ? <Card user={user} /> : <h3 className="no-results">No Results</h3>}
         <Attribuition />
       </div>
     </div>
