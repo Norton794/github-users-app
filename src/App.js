@@ -11,7 +11,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 function App() {
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("norton794");
-  const [key, setKey] = useState("");
+  const [key, setKey] = useState("norton794");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
           <ThemeSwitcher theme={`DARK`} />
         </div>
         <SearchBar username={username} setUsername={setUsername} setKey={setKey} />
-        {error ? <Card user={user} /> : <h3 className="no-results">No Results</h3>}
+        {!error ? <Card user={user} /> : <h3 className="no-results">No Results</h3>}
         <Attribuition />
       </div>
     </div>
