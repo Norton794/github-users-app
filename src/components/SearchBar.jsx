@@ -4,7 +4,7 @@ import { SearchIcon } from "./Icons";
 
 export default function SearchBar(props) {
   return (
-    <form className="search-form">
+    <div className="search-form">
       <div className="search__wrapper">
         <div className="search__icon">{SearchIcon}</div>
         <div>
@@ -26,6 +26,6 @@ export default function SearchBar(props) {
           </button>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
