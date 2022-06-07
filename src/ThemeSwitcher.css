@@ -7,10 +7,19 @@
 .theme__container span{
     text-transform: uppercase;
     padding-right: 12px;
-    color: #697c9a;
+    
     font-weight: 700;
     font-size: 13px;
     line-height: 19px;
     letter-spacing: 2.5px;
     
+}
+
+
+.theme__container span.light{
+    color: #697c9a;
+}
+
+.theme__container span.dark{
+    color: #ffffff;
 }

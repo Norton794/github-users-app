@@ -5,6 +5,18 @@
     font-family: "Space Mono", sans-serif;
 }
 
+.search__input.dark{
+    background-color: #1e2a47;
+    color: #ffffff;
+    caret-color: #0079ff;
+}
+
+.search__input.light{
+    background-color: #ffffff;
+    color: #000;
+    caret-color: #697c9a;
+}
+
 .search__wrapper{
     margin-top: 2rem;
     flex: 2;

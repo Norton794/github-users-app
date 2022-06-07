@@ -1,7 +1,6 @@
 .card__wrapper {
   margin-top: 4rem;
-  background-color: #fff;
-  color: #2b3442;
+
   width: 100%;
   padding: 24px;
   box-shadow: 0px 16px 30px -10px #4660bb33;
@@ -9,6 +8,16 @@
   margin-bottom: 2rem;
   display: flex;
   justify-content: flex-start;
+}
+
+.card__wrapper.dark {
+  background-color: #1e2a47;
+  color: #fff;
+}
+
+.card__wrapper.light {
+  background-color: #fff;
+  color: #2b3442;
 }
 
 .card__img img {
@@ -37,25 +46,32 @@
   text-decoration: none;
 }
 
-.first h2{
-    font-size: 1.2rem;
+.first h2 {
+  font-size: 1.2rem;
 }
-
 
 .joined-at {
   margin-top: 0.5rem;
-  font-size: .9rem;
- 
+  font-size: 0.9rem;
 }
 
 .card__info--metrics {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f6f8ff;
   padding: 1.2rem;
   margin-top: 1.5rem;
   text-align: center;
+}
+
+.card__info--metrics.dark {
+  background-color: #141d2f;
+  color: #fff;
+}
+
+.card__info--metrics.light {
+  background-color: #f6f8ff;
+  color: #000;
 }
 
 .card__info--bottom {
@@ -77,6 +93,20 @@
   flex-direction: column;
 }
 
-.card__info--bottom .left div:first-child, .card__info--bottom .right div:first-child{
-    margin-bottom: 1rem;
+.card__info--bottom .left div:first-child,
+.card__info--bottom .right div:first-child {
+  margin-bottom: 1rem;
+}
+
+.not-available.light {
+  color: #4b6a9b;
+}
+
+.not-available.dark {
+  color: #fff;
+}
+
+.right > div > a {
+  text-decoration: none;
+  color: #4b6a9b;
 }

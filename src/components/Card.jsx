@@ -1,9 +1,12 @@
 import React from "react";
 import "../Card.css";
 import { BuildingIcon, LocIcon, SocialIcon, ChainIcon } from "./Icons";
+import { ModeContext } from "../context/index";
+
 function Card({ user }) {
+  const context = React.useContext(ModeContext);
   return (
-    <div className="card__wrapper">
+    <div className={`card__wrapper ${context.mode}`}>
       <div className="card__img">
         <img src={user?.avatar_url} alt="User Pic" />
       </div>
@@ -20,7 +23,7 @@ function Card({ user }) {
           </div>
         </div>
 
-        <div className="card__info--metrics">
+        <div className={`card__info--metrics ${context.mode}`}>
           <div className="metric__repos">
             <h3>Repos</h3>
             <span>{user?.public_repos}</span>
@@ -43,7 +46,7 @@ function Card({ user }) {
             </div>
             <div>
               {SocialIcon}
-              <span className="not-available">
+              <span className={`not-available ${context.mode}`}>
                 {user?.twitter_username
                   ? user?.twitter_username
                   : "Not available"}

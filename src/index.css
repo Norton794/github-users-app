@@ -9,7 +9,7 @@
 
 body {
   font-family: "Space Mono", sans-serif;
-  
+  transition: 0.5s;
 }
 
 a{
