@@ -1,26 +1,25 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Attribuition from "./components/Attribuition";
 import Card from "./components/Card";
 import SearchBar from "./components/SearchBar";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { ModeContext } from "./context";
+import getUsers from './utils/index'
 
 
 
 function App() {
   const [mode, setMode] = useState("dark")
   const [user, setUser] = useState(null);
-  const [username, setUsername] = useState("norton794");
-  const [key, setKey] = useState("norton794");
-  const [error, setError] = useState(null);
-  
+  const [username, setUsername] = useState("octocat");
+  const [key, setKey] = useState("octocat");
+
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${key}`)
-      .then((response) => response.json())
-      .then((json) => setUser(json))
-      .catch((err) => setError(err));
+    getUsers(key).then(function (result) {
+      setUser(result)
+    })
   }, [key]);
 
   return (
@@ -32,7 +31,7 @@ function App() {
             <ThemeSwitcher />
           </div>
           <SearchBar username={username} setUsername={setUsername} setKey={setKey} />
-          {!error ? <Card user={user} /> : <h3 className="no-results">No Results</h3>}
+          <Card user={user} />
           <Attribuition />
         </div>
       </div>

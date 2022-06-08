@@ -1,5 +1,5 @@
 import React from "react";
-import "../Card.css";
+import "./Card.css";
 import { BuildingIcon, LocIcon, SocialIcon, ChainIcon } from "./Icons";
 import { ModeContext } from "../context/index";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../SearchBar.css";
+import "./SearchBar.css";
 import { SearchIcon } from "./Icons";
 import { ModeContext } from "../context/index";
 export default function SearchBar(props) {

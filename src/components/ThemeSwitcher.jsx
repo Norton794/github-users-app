@@ -1,6 +1,6 @@
 import React from "react";
 import { MoonIcon, SunIcon } from "./Icons";
-import "../ThemeSwitcher.css";
+import "./ThemeSwitcher.css";
 import { ModeContext } from "../context/index";
 
 export default function ThemeSwitcher() {
